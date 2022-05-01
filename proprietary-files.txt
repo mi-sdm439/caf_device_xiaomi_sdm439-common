@@ -1,0 +1,18 @@
+# All unpinned blobs below are extracted from Xiaomi/olive/olive:10/QKQ1.191014.001/V12.5.5.0.QCNCNXM:user/release-keys
+
+# Camera
+vendor/lib/libois_bu63165.so
+vendor/lib/libois_lc898122.so
+vendor/lib/libmmcamera2_sensor_modules.so
+
+# Graphics firmware
+vendor/firmware/a506_zap.mdt
+
+# Thermal
+vendor/etc/thermal-engine-camera.conf
+vendor/etc/thermal-engine-high.conf
+vendor/etc/thermal-engine-map.conf
+vendor/etc/thermal-engine-nolimits.conf
+vendor/etc/thermal-engine-normal.conf
+vendor/etc/thermal-engine-sgame.conf
+vendor/etc/thermal-engine.conf
