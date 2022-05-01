@@ -177,3 +177,6 @@ persist.camera.privapp.list=org.codeaurora.snapcam
 
 #set cutoff voltage to 3400mV
 ro.cutoff_voltage_mv=3400
+
+# Navigation Bar
+qemu.hw.mainkeys=0
