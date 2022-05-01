@@ -11,11 +11,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += fastbootd
 # Add default implementation of fastboot HAL.
 PRODUCT_PACKAGES += android.hardware.fastboot@1.0-impl-mock
-ifeq ($(ENABLE_AB), true)
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/fstabs-4.9/fstab_AB_dynamic_partition_variant.qti:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
-else
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/fstabs-4.9/fstab_non_AB_dynamic_partition_variant.qti:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
-endif
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/fstab/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
 endif
 
 # Enable AVB 2.0
