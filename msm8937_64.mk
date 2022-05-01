@@ -1,5 +1,10 @@
 ALLOW_MISSING_DEPENDENCIES=true
 
+# Xiaomi props
+PRODUCT_PROPERTY_OVERRIDES := \
+    persist.vendor.camera.stats.test=5 \
+    ro.vendor.sensors.pseudo_gyro=true
+
 # Default A/B configuration.
 ENABLE_AB := false
 
