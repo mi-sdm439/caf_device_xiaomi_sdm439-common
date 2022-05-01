@@ -120,9 +120,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # privapp-permissions whitelisting
 PRODUCT_PROPERTY_OVERRIDES += ro.control_privapp_permissions=enforce
 
-PRODUCT_PROPERTY_OVERRIDES += \
-           dalvik.vm.heapminfree=4m \
-           dalvik.vm.heapstartsize=16m
+TARGET_DEFINES_DALVIK_HEAP := true
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 $(call inherit-product, device/qcom/common/common64.mk)
 
