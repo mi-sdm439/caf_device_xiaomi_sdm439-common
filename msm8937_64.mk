@@ -8,6 +8,10 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.gyroscope.xml
 
+# USB HAL
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
+
 # Xiaomi props
 PRODUCT_PROPERTY_OVERRIDES := \
     persist.vendor.camera.stats.test=5 \
