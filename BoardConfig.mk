@@ -3,6 +3,8 @@
 # Product-specific compile-time definitions.
 #
 
+TARGET_SCREEN_DENSITY := 320
+
 #Generate DTBO image
 ifeq ($(TARGET_KERNEL_VERSION), 4.9)
 BOARD_KERNEL_SEPARATED_DTBO := true
