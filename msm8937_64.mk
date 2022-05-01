@@ -38,13 +38,13 @@ endif
 TARGET_USES_AOSP := false
 TARGET_USES_AOSP_FOR_AUDIO := false
 TARGET_USES_QCOM_BSP := false
-TARGET_SYSTEM_PROP := device/qcom/msm8937_64/system.prop
+TARGET_SYSTEM_PROP := device/xiaomi/sdm439-common/system.prop
 
 ifeq ($(TARGET_USES_AOSP),true)
 TARGET_DISABLE_DASH := true
 endif
 
-DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8937_64/overlay
+DEVICE_PACKAGE_OVERLAYS := device/xiaomi/sdm439-common/overlay
 # Default vendor configuration.
 ifeq ($(ENABLE_VENDOR_IMAGE),)
 ENABLE_VENDOR_IMAGE :=true
@@ -128,11 +128,6 @@ $(call inherit-product, device/qcom/common/common64.mk)
 #Property to enable Swap
 PRODUCT_PROPERTY_OVERRIDES += ro.vendor.qti.config.swap=1
 
-PRODUCT_NAME := msm8937_64
-PRODUCT_DEVICE := msm8937_64
-PRODUCT_BRAND := qti
-PRODUCT_MODEL := msm8937 for arm64
-
 PRODUCT_BOOT_JARS += tcmiface
 
 # Kernel modules install path
@@ -148,24 +143,24 @@ PRODUCT_BOOT_JARS += WfdCommon
 #PRODUCT_BOOT_JARS += oem-services
 endif
 
-DEVICE_MANIFEST_FILE := device/qcom/msm8937_64/manifest.xml
+DEVICE_MANIFEST_FILE := device/xiaomi/sdm439-common/manifest.xml
 ifeq ($(ENABLE_AB), true)
-DEVICE_MANIFEST_FILE += device/qcom/msm8937_64/manifest_ab.xml
+DEVICE_MANIFEST_FILE += device/xiaomi/sdm439-common/manifest_ab.xml
 endif
 
 ifeq ($(strip $(TARGET_KERNEL_VERSION)), 3.18)
-    DEVICE_MANIFEST_FILE += device/qcom/msm8937_64/manifest_target_level_2.xml
+    DEVICE_MANIFEST_FILE += device/xiaomi/sdm439-common/manifest_target_level_2.xml
 endif
 ifeq ($(TARGET_KERNEL_VERSION), 4.9)
     ifeq ($(strip $(BOARD_DYNAMIC_PARTITION_ENABLE)),true)
-        DEVICE_MANIFEST_FILE += device/qcom/msm8937_64/manifest_target_level_4.xml
+        DEVICE_MANIFEST_FILE += device/xiaomi/sdm439-common/manifest_target_level_4.xml
     else
-        DEVICE_MANIFEST_FILE += device/qcom/msm8937_64/manifest_target_level_3.xml
+        DEVICE_MANIFEST_FILE += device/xiaomi/sdm439-common/manifest_target_level_3.xml
     endif
 endif
 
 DEVICE_MATRIX_FILE   := device/qcom/common/compatibility_matrix.xml
-DEVICE_FRAMEWORK_MANIFEST_FILE := device/qcom/msm8937_64/framework_manifest.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE := device/xiaomi/sdm439-common/framework_manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     vendor/qcom/opensource/core-utils/vendor_framework_compatibility_matrix.xml
 # default is nosdcard, S/W button enabled in resource
@@ -254,7 +249,7 @@ PRODUCT_PACKAGES += wcnss_service
 
 # FBE support
 PRODUCT_COPY_FILES += \
-    device/qcom/msm8937_64/init.qti.qseecomd.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.qseecomd.sh
+    device/xiaomi/sdm439-common/init.qti.qseecomd.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.qseecomd.sh
 
 # VB xml
 PRODUCT_COPY_FILES += \
@@ -262,13 +257,13 @@ PRODUCT_COPY_FILES += \
 
 # MSM IRQ Balancer configuration file
 PRODUCT_COPY_FILES += \
-    device/qcom/msm8937_64/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
+    device/xiaomi/sdm439-common/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
 
 #wlan driver
 PRODUCT_COPY_FILES += \
-    device/qcom/msm8937_64/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
+    device/xiaomi/sdm439-common/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
     device/qcom/msm8937_32/WCNSS_wlan_dictionary.dat:persist/WCNSS_wlan_dictionary.dat \
-    device/qcom/msm8937_64/WCNSS_qcom_wlan_nv.bin:persist/WCNSS_qcom_wlan_nv.bin
+    device/xiaomi/sdm439-common/WCNSS_qcom_wlan_nv.bin:persist/WCNSS_qcom_wlan_nv.bin
 
 PRODUCT_PACKAGES += \
     wpa_supplicant_overlay.conf \
@@ -309,7 +304,7 @@ PRODUCT_LOCALES += th_TH vi_VN tl_PH hi_IN ar_EG ru_RU tr_TR pt_BR bn_IN mr_IN t
 
 # Powerhint configuration file
 PRODUCT_COPY_FILES += \
-     device/qcom/msm8937_64/powerhint.xml:system/etc/powerhint.xml
+     device/xiaomi/sdm439-common/powerhint.xml:system/etc/powerhint.xml
 
 #Healthd packages
 PRODUCT_PACKAGES += android.hardware.health@2.0-impl \
@@ -326,7 +321,7 @@ PRODUCT_PACKAGES += \
 
 # Sensor HAL conf file
  PRODUCT_COPY_FILES += \
-     device/qcom/msm8937_64/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
+     device/xiaomi/sdm439-common/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 
 
 # Enable logdumpd service only for non-perf bootimage
@@ -396,9 +391,9 @@ ifeq ($(strip $(TARGET_KERNEL_VERSION)), 4.9)
 endif
 
 ifeq ($(ENABLE_KM_4_0), true)
-    DEVICE_MANIFEST_FILE += device/qcom/msm8937_64/keymaster.xml
+    DEVICE_MANIFEST_FILE += device/xiaomi/sdm439-common/keymaster.xml
 else
-    DEVICE_MANIFEST_FILE += device/qcom/msm8937_64/keymaster_ota.xml
+    DEVICE_MANIFEST_FILE += device/xiaomi/sdm439-common/keymaster_ota.xml
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += rild.libpath=/vendor/lib64/libril-qc-qmi-1.so

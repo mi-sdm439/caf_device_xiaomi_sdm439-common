@@ -130,37 +130,37 @@ endif
 ifneq ($(wildcard kernel/msm-3.18),)
     ifeq ($(ENABLE_AB),true)
       ifeq ($(ENABLE_VENDOR_IMAGE), true)
-        TARGET_RECOVERY_FSTAB := device/qcom/msm8937_64/fstabs-3.18/recovery_AB_split_variant.fstab
+        TARGET_RECOVERY_FSTAB := device/xiaomi/sdm439-common/fstabs-3.18/recovery_AB_split_variant.fstab
       else
-        TARGET_RECOVERY_FSTAB := device/qcom/msm8937_64/fstabs-3.18/recovery_AB_non-split_variant.fstab
+        TARGET_RECOVERY_FSTAB := device/xiaomi/sdm439-common/fstabs-3.18/recovery_AB_non-split_variant.fstab
       endif
     else
       ifeq ($(ENABLE_VENDOR_IMAGE), true)
-        TARGET_RECOVERY_FSTAB := device/qcom/msm8937_64/fstabs-3.18/recovery_non-AB_split_variant.fstab
+        TARGET_RECOVERY_FSTAB := device/xiaomi/sdm439-common/fstabs-3.18/recovery_non-AB_split_variant.fstab
       else
-        TARGET_RECOVERY_FSTAB := device/qcom/msm8937_64/fstabs-3.18/recovery_non-AB_non-split_variant.fstab
+        TARGET_RECOVERY_FSTAB := device/xiaomi/sdm439-common/fstabs-3.18/recovery_non-AB_non-split_variant.fstab
       endif
     endif
 else ifneq ($(wildcard kernel/msm-4.9),)
     ifeq ($(ENABLE_AB),true)
       ifeq ($(ENABLE_VENDOR_IMAGE), true)
         ifeq ($(strip $(BOARD_DYNAMIC_PARTITION_ENABLE)),true)
-          TARGET_RECOVERY_FSTAB := device/qcom/msm8937_64/fstabs-4.9/recovery_AB_dynamic_variant.fstab
+          TARGET_RECOVERY_FSTAB := device/xiaomi/sdm439-common/fstabs-4.9/recovery_AB_dynamic_variant.fstab
         else
-          TARGET_RECOVERY_FSTAB := device/qcom/msm8937_64/fstabs-4.9/recovery_AB_split_variant.fstab
+          TARGET_RECOVERY_FSTAB := device/xiaomi/sdm439-common/fstabs-4.9/recovery_AB_split_variant.fstab
         endif
       else
-        TARGET_RECOVERY_FSTAB := device/qcom/msm8937_64/fstabs-4.9/recovery_AB_non-split_variant.fstab
+        TARGET_RECOVERY_FSTAB := device/xiaomi/sdm439-common/fstabs-4.9/recovery_AB_non-split_variant.fstab
       endif
     else
       ifeq ($(ENABLE_VENDOR_IMAGE), true)
         ifeq ($(strip $(BOARD_DYNAMIC_PARTITION_ENABLE)),true)
-          TARGET_RECOVERY_FSTAB := device/qcom/msm8937_64/fstabs-4.9/recovery_non-AB_dynamic_variant.fstab
+          TARGET_RECOVERY_FSTAB := device/xiaomi/sdm439-common/fstabs-4.9/recovery_non-AB_dynamic_variant.fstab
         else
-          TARGET_RECOVERY_FSTAB := device/qcom/msm8937_64/fstabs-4.9/recovery_non-AB_split_variant.fstab
+          TARGET_RECOVERY_FSTAB := device/xiaomi/sdm439-common/fstabs-4.9/recovery_non-AB_split_variant.fstab
         endif
       else
-        TARGET_RECOVERY_FSTAB := device/qcom/msm8937_64/fstabs-4.9/recovery_non-AB_non-split_variant.fstab
+        TARGET_RECOVERY_FSTAB := device/xiaomi/sdm439-common/fstabs-4.9/recovery_non-AB_non-split_variant.fstab
       endif
     endif
 else
@@ -260,7 +260,7 @@ MAX_EGL_CACHE_KEY_SIZE := 12*1024
 # of the device.
 MAX_EGL_CACHE_SIZE := 2048*1024
 
-BOARD_EGL_CFG := device/qcom/msm8937_64/egl.cfg
+BOARD_EGL_CFG := device/xiaomi/sdm439-common/egl.cfg
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 # Add NON-HLOS files for ota upgrade
 ADD_RADIO_FILES := true
