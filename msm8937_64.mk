@@ -4,6 +4,10 @@ ALLOW_MISSING_DEPENDENCIES=true
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+# Gyro sensor
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.gyroscope.xml
+
 # Xiaomi props
 PRODUCT_PROPERTY_OVERRIDES := \
     persist.vendor.camera.stats.test=5 \
