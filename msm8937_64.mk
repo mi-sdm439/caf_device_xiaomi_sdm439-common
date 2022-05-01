@@ -474,3 +474,6 @@ PRODUCT_COPY_FILES += \
 ###################################################################################
 $(call inherit-product-if-exists, vendor/qcom/defs/product-defs/legacy/*.mk)
 ###################################################################################
+
+# Inherit the proprietary files
+$(call inherit-product, vendor/xiaomi/sdm439-common/sdm439-common-vendor.mk)
