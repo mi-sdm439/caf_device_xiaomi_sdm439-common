@@ -1,5 +1,9 @@
 ALLOW_MISSING_DEPENDENCIES=true
 
+# AAPT
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
 # Xiaomi props
 PRODUCT_PROPERTY_OVERRIDES := \
     persist.vendor.camera.stats.test=5 \
