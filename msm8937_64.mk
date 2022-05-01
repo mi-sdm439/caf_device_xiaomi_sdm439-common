@@ -140,6 +140,16 @@ $(call inherit-product, device/qcom/common/common64.mk)
 #Property to enable Swap
 PRODUCT_PROPERTY_OVERRIDES += ro.vendor.qti.config.swap=1
 
+PRODUCT_DEVICE := $(XIAOMI_DEVICE)
+PRODUCT_NAME := $(XIAOMI_DEVICE)
+BOARD_VENDOR := xiaomi
+PRODUCT_BRAND := xiaomi
+PRODUCT_MODEL := $(XIAOMI_MODEL)
+PRODUCT_MANUFACTURER := xiaomi
+TARGET_VENDOR := xiaomi
+
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
 PRODUCT_BOOT_JARS += tcmiface
 
 # Kernel modules install path
