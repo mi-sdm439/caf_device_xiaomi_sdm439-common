@@ -1,5 +1,12 @@
 # All unpinned blobs below are extracted from Xiaomi/olive/olive:10/QKQ1.191014.001/V12.5.5.0.QCNCNXM:user/release-keys
 
+# ADSP modules
+vendor/lib/rfsa/adsp/dirac_resource.dar
+vendor/lib/rfsa/adsp/libdirac-capiv2.so
+vendor/lib/rfsa/adsp/misound_karaokemix_res.bin
+vendor/lib/rfsa/adsp/misound_karaoke_res.bin
+vendor/lib/rfsa/adsp/misound_res.bin
+
 # Camera modules
 vendor/lib/libois_bu63165.so
 vendor/lib/libois_lc898122.so
