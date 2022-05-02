@@ -6,7 +6,8 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.msm8937
+    camera.msm8937 \
+    SnapdragonCamera
 
 # Gyro sensor
 PRODUCT_COPY_FILES += \
