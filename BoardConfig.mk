@@ -5,6 +5,8 @@
 
 TARGET_SCREEN_DENSITY := 320
 
+BOARD_SEPOLICY_DIRS += device/xiaomi/sdm439-common/sepolicy/vendor
+
 #Generate DTBO image
 ifeq ($(TARGET_KERNEL_VERSION), 4.9)
 BOARD_KERNEL_SEPARATED_DTBO := true
