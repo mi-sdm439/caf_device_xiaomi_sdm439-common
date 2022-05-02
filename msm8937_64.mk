@@ -17,6 +17,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
 
+# Vulkan
+VULKAN_FEATURE_LEVEL_0_TARGETS_LIST += $(XIAOMI_DEVICE)
+
 # Xiaomi props
 PRODUCT_PROPERTY_OVERRIDES := \
     persist.vendor.camera.stats.test=5 \
